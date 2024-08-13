@@ -3,8 +3,8 @@
   <entry>
     <title>Hello World!</title>
     <url>/2024/08/10/hello-world/</url>
-    <content><![CDATA[<p>终于建好了啦，忙了三个小时:sweat_smile:，最后hoxe d上传到github那一步太痛苦了</p>
-<p>中间开加速器的时候老是占用npm用的22端口，还要.shh文件里建个config才能让npm调用433端口:sweat_smile:</p>
+    <content><![CDATA[<p>终于建好了啦，忙了三个小时，最后hoxe d上传到github那一步太痛苦了</p>
+<p>中间开加速器的时候老是占用npm用的22端口，还要.shh文件里建个config才能让npm调用433端口​😅​</p>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -12,8 +12,8 @@
   </entry>
   <entry>
     <title>零成本搭建博客</title>
-    <url>/2024/08/11/%E5%9F%BA%E4%BA%8Ehexo%E4%B8%8Egithub%E7%9A%84%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88%E4%B8%8E%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h1><p>   你想拥有一个人独立博客吗？你是否在为搭建所需的学习成本，经济成本而苦恼？其实搭建我们可以基于hoxe博客框架+GitHub的代码托管服务<strong>零成本</strong>的搭建个人独立博客。</p>
+    <url>/2024/08/11/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h1><p>   你想拥有一个人独立博客吗？你是否在为搭建所需的学习成本，经济成本而苦恼？其实我们可以基于hoxe博客框架+GitHub的代码托管服务来<strong>零成本</strong>的搭建个人独立博客。</p>
 <span id="more"></span>
 
 
@@ -34,6 +34,34 @@
 <h2 id="二、安装hoxe-博客框架"><a href="#二、安装hoxe-博客框架" class="headerlink" title="二、安装hoxe(博客框架)"></a>二、安装hoxe(博客框架)</h2>]]></content>
       <categories>
         <category>博客</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>c#学习日记(1)</title>
+    <url>/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/</url>
+    <content><![CDATA[<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="初始变量"><a href="#初始变量" class="headerlink" title="初始变量"></a>初始变量</h1><p>   一个变量只不过是一个供程序操作的存储区的名字</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><p>命名空间的设计目的是提供一种让一组名称与其他名称分隔开的方式。在一个命名空间中声明的类的名称与另一个命名空间中声明的相同的类的名称不冲突。简单来说就是方便我们访问<strong>模块</strong></p>
+<p>例如要用.NET提供的方法writeline()方法，就需要调用system这个模块</p>
+<h2 id="using"><a href="#using" class="headerlink" title="using ~"></a>using ~</h2><p>下面两份代码作用完全一样</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        System.Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>using</code> 偷懒神器！！</p>
+<h1 id="class"><a href="#class" class="headerlink" title="class"></a>class</h1><p>当你定义一个类时，你定义了一个数据类型的蓝图。这实际上并没有定义任何的数据，但它定义了类的名称意味着什么，也就是说，类的对象由什么组成及在这个对象上可执行什么操作。对象是类的实例。构成类的方法和变量称为类的成员。</p>
+<p>例如要用.NET提供的writeline()方法，就要调用system模块下的console类</p>
+<p><em>也即是说模块包含类</em></p>
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
       </categories>
   </entry>
 </search>
