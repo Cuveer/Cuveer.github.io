@@ -11,32 +11,6 @@
       </categories>
   </entry>
   <entry>
-    <title>零成本搭建博客</title>
-    <url>/2024/08/11/%E9%9B%B6%E6%88%90%E6%9C%AC%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h1><p>   你想拥有一个人独立博客吗？你是否在为搭建所需的学习成本，经济成本而苦恼？其实我们可以基于hoxe博客框架+GitHub的代码托管服务来<strong>零成本</strong>的搭建个人独立博客。</p>
-<span id="more"></span>
-
-
-
-
-
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="一、-安装依赖"><a href="#一、-安装依赖" class="headerlink" title="一、 安装依赖"></a>一、 安装依赖</h2><h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h4><p>  打开<a href="https://git-scm.com/" title="点击跳转">git官网</a></p>
-<p>  <img src="/git%E5%AE%98%E7%BD%91.PNG"></p>
-<p>点击<strong>Downloads按钮</strong>选择你设备所适配的版本下载，下载好后打开文件，然后无脑下一步就好了。</p>
-<h4 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h4><p>   打开<a href="https://nodejs.org/zh-cn" title="点击跳转">node.js官网</a></p>
-<p>   <img src="/node.js%E5%AE%98%E7%BD%91.PNG"></p>
-<p>​          点击<strong>下载Node.js按钮</strong>下载，然后还是运行程序，和无脑下一步就行。</p>
-<h4 id="3-检查"><a href="#3-检查" class="headerlink" title="3.检查"></a>3.检查</h4><p>  <code>ctrl + r</code>打开运行窗口，并输<code>cmd</code></p>
-<p><img src="/%E8%BF%90%E8%A1%8Ccmd.PNG"></p>
-<p>打开cmd输入分别<code>node -v</code>，<code>git -v</code>命令台输出版本号就算软件安装成功了</p>
-<p><img src="/cmd%E8%BF%90%E8%A1%8C%E6%A3%80%E6%9F%A5.png"></p>
-<p><em>注:如果没显示的话就重做1. 2.步试试吧💪</em></p>
-<h2 id="二、安装hoxe-博客框架"><a href="#二、安装hoxe-博客框架" class="headerlink" title="二、安装hoxe(博客框架)"></a>二、安装hoxe(博客框架)</h2>]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-  </entry>
-  <entry>
     <title>c#学习日记(1)</title>
     <url>/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/</url>
     <content><![CDATA[<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
