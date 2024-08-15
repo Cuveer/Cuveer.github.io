@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World!</title>
-    <url>/2024/08/10/hello-world/</url>
-    <content><![CDATA[<p>终于建好了啦，忙了三个小时，最后hoxe d上传到github那一步太痛苦了</p>
-<p>中间开加速器的时候老是占用npm用的22端口，还要.shh文件里建个config才能让npm调用433端口​😅​</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
     <title>c#学习日记(1)</title>
     <url>/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/</url>
     <content><![CDATA[<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -89,6 +79,16 @@
 ]]></content>
       <categories>
         <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World!</title>
+    <url>/2024/08/10/hello-world/</url>
+    <content><![CDATA[<p>终于建好了啦，忙了三个小时，最后hoxe d上传到github那一步太痛苦了</p>
+<p>中间开加速器的时候老是占用npm用的22端口，还要.shh文件里建个config才能让npm调用433端口​😅​</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
       </categories>
   </entry>
 </search>
