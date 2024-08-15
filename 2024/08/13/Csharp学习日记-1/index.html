@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">368</span>
+            <span class="post-count">377</span>
         </span>
     </span>
 
@@ -126,13 +126,13 @@
 
 
 <h1 id="初始变量"><a href="#初始变量" class="headerlink" title="初始变量"></a>初始变量</h1><p>   一个变量只不过是一个供程序操作的存储区的名字</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值; 或 变量类型 变量名;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
 
 
 
 <h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><p>命名空间的设计目的是提供一种让一组名称与其他名称分隔开的方式。在一个命名空间中声明的类的名称与另一个命名空间中声明的相同的类的名称不冲突。简单来说就是方便我们访问<strong>模块</strong></p>
 <p>例如要用.NET提供的方法writeline()方法，就需要调用system这个模块</p>
-<h2 id="using"><a href="#using" class="headerlink" title="using ~"></a>using ~</h2><p>下面两份代码作用完全一样</p>
+<h2 id="using-namespace-name"><a href="#using-namespace-name" class="headerlink" title="using namespace_name"></a>using namespace_name</h2><p>下面两份代码作用完全一样</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        System.Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -215,6 +215,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2024/08/14/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            c#学习日记(2)
+          
+        </div>
+      </a>
     
     
       <a href="/2024/08/10/hello-world/" class="article-nav-link">

@@ -18,13 +18,13 @@
 
 
 <h1 id="初始变量"><a href="#初始变量" class="headerlink" title="初始变量"></a>初始变量</h1><p>   一个变量只不过是一个供程序操作的存储区的名字</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值; 或 变量类型 变量名;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
 
 
 
 <h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><p>命名空间的设计目的是提供一种让一组名称与其他名称分隔开的方式。在一个命名空间中声明的类的名称与另一个命名空间中声明的相同的类的名称不冲突。简单来说就是方便我们访问<strong>模块</strong></p>
 <p>例如要用.NET提供的方法writeline()方法，就需要调用system这个模块</p>
-<h2 id="using"><a href="#using" class="headerlink" title="using ~"></a>using ~</h2><p>下面两份代码作用完全一样</p>
+<h2 id="using-namespace-name"><a href="#using-namespace-name" class="headerlink" title="using namespace_name"></a>using namespace_name</h2><p>下面两份代码作用完全一样</p>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        System.Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -33,6 +33,59 @@
 <h1 id="class"><a href="#class" class="headerlink" title="class"></a>class</h1><p>当你定义一个类时，你定义了一个数据类型的蓝图。这实际上并没有定义任何的数据，但它定义了类的名称意味着什么，也就是说，类的对象由什么组成及在这个对象上可执行什么操作。对象是类的实例。构成类的方法和变量称为类的成员。</p>
 <p>例如要用.NET提供的writeline()方法，就要调用system模块下的console类</p>
 <p><em>也即是说模块包含类</em></p>
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>c#学习日记(2)</title>
+    <url>/2024/08/14/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/</url>
+    <content><![CDATA[<h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><p>变量类型是类似于各种不同的容器类型，不同的容器类型可以装不同的东西。</p>
+<h2 id="常用变量类型及其关键字"><a href="#常用变量类型及其关键字" class="headerlink" title="常用变量类型及其关键字"></a>常用变量类型及其关键字</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>整数类型</td>
+<td>int</td>
+</tr>
+<tr>
+<td>字符类型</td>
+<td>string</td>
+</tr>
+<tr>
+<td>布尔类型</td>
+<td>bool</td>
+</tr>
+</tbody></table>
+<h3 id="变量类型-变量名"><a href="#变量类型-变量名" class="headerlink" title="变量类型 变量名;"></a><code>变量类型 变量名;</code></h3><p>这样的写法C#会自动给声明的变量赋予一个值这个值，这个值随着变量类型的改变而改变、</p>
+<p>如：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x;<span class="comment">//x = 0</span></span><br><span class="line"><span class="built_in">bool</span> y;<span class="comment">// y = false  </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><p>在声明变量后，不能且不用再次声明变量，可以直接用赋值号<code>=</code> 来重新赋值</p>
+<p>如：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> holle_zh = <span class="string">&quot;你好&quot;</span>;<span class="comment">//声明变量</span></span><br><span class="line"></span><br><span class="line">            holle_zh = <span class="string">&quot;你好啊&quot;</span>;<span class="comment">//重新赋值</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(holle_zh);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行结果为<code>你好啊</code></p>
+<p>下面是一个无效赋值语句，会产生编译时错误：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="number">10</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<p>注意下面是个有效语句：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x = <span class="number">100</span>;</span><br><span class="line">x = x + <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><p>简单的整数加法计算器</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第一个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> x;</span><br><span class="line">        x =Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第二个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> y;</span><br><span class="line">        y = Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> z;</span><br><span class="line">        z = x + y;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;计算结果为:&quot;</span>);</span><br><span class="line">        Console.WriteLine(z);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>c#学习日记</category>
