@@ -176,7 +176,297 @@
     
     
     <article
-  id="post-csharp学习日记-6"
+  id="post-Csharp学习日记-7"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" class="article-date">
+  <time datetime="2024-08-19T06:34:46.495Z" itemprop="datePublished">2024-08-19</time>
+</a>   
+
+ 
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <hr>
+<p>title: c#学习日记(7)<br>date: 2024-08-19 14:34:46<br>tags:<br>categories: c#学习日记</p>
+<h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
+<p>try语句类似于if语句，若try语句内代码执行成功则不会执行catch语句内的代码</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//有可能报错的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//报错处理代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h1><p>return语句用于从当前方法中返回一个值，并终止该方法的执行。</p>
+<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 增加在输入计算数值时，输入非int可容纳的值的应对方法</li>
+</ul>
+<pre><code class="c#">using System;
+using System.Net.NetworkInformation;
+
+
+class Program
+    &#123;
+
+    static void Main()
+    &#123;
+
+        for (string PD = &quot;C&quot;; PD == &quot;C&quot; || PD == &quot;c&quot;;)//变量名取自&quot;判断&quot;的拼音首字母
+        &#123;
+            Console.WriteLine(&quot;请输入需要使用的运算方式;&quot;);
+            string FS = Console.ReadLine();//变量名取自&quot;方式&quot;的拼音首字母
+            
+            if (FS == &quot;加法&quot;)
+            &#123;
+                加法();
+            &#125;
+            else if (FS == &quot;减法&quot;)
+            &#123;
+                减法();
+            &#125;
+            else if (FS == &quot;乘法&quot;)
+            &#123;
+                乘法();
+            &#125;
+            else if (FS == &quot;除法&quot;)
+            &#123;
+                除法();
+            &#125;
+            else if (FS == &quot;比大小&quot;)
+            &#123;
+                比大小();
+            &#125;
+            else
+            &#123;
+                失败(FS);
+
+            &#125;
+
+            Console.WriteLine(&quot;按C键继续，按其他键退出:&quot;);
+            PD = Console.ReadLine();
+            
+        &#125;
+        
+    &#125;
+
+
+    static void 加法()
+        &#123;
+            Console.WriteLine(&quot;请输入第一个加数&quot;);
+            int x;
+            try 
+            &#123;     
+                 x = Convert.ToInt32(Console.ReadLine());
+            &#125;
+            catch
+            &#123;
+                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
+                 return;
+            &#125;
+            
+        
+            Console.WriteLine(&quot;请输入第二个加数&quot;);
+            int y;
+
+            try 
+            &#123;
+                 y = Convert.ToInt32(Console.ReadLine());
+            &#125;
+             catch
+            &#123;
+                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
+                 return;
+            &#125;
+
+
+        int z;
+            z = x + y;
+            Console.WriteLine(&quot;计算结果为:&quot;);
+            Console.WriteLine(z);
+
+        &#125;
+
+    static void 减法()
+    &#123;
+        Console.WriteLine(&quot;请输入被减数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入减数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        int z;
+        z = x - y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+
+    &#125;
+
+    static void 乘法()
+    &#123;
+        Console.WriteLine(&quot;请输入第一个乘数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入第二个乘数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+
+        int z;
+        z = x * y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+ 
+    &#125;
+
+    static void 除法()
+    &#123;
+        Console.WriteLine(&quot;请输入被除数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入除数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        int z;
+        z = x / y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+
+    &#125;
+
+    static void 比大小()
+    &#123;
+        Console.WriteLine(&quot;请输入比较大小的数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入比较大小的数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        if (x &gt; y)
+        &#123;
+            Console.WriteLine(x + &quot;&gt;&quot; + y);
+        &#125;
+        else if (x == y)
+        &#123;
+            Console.WriteLine(x + &quot;=&quot; + y);
+        &#125;
+        else
+        &#123;
+            Console.WriteLine(x + &quot;&lt;&quot; + y);
+        &#125;
+
+
+
+    &#125;
+
+
+    static void 失败(string fs)
+        &#123;
+        
+        Console.WriteLine(&quot;抱歉无法提供&quot; + fs + &quot;该计算方法&quot;);
+    &#125;
+
+      
+    
+    &#125;
+</code></pre>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Csharp学习日记-6"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -187,7 +477,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/18/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/"
+  <a class="article-title" href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/"
     >c#学习日记(6)</a> 
 </h2>
  
@@ -196,7 +486,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/18/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-date">
+      <a href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-date">
   <time datetime="2024-08-18T08:55:00.000Z" itemprop="datePublished">2024-08-18</time>
 </a> 
   <div class="article-category">
@@ -467,7 +757,7 @@
 
     
     <article
-  id="post-csharp学习日记-2"
+  id="post-Csharp学习日记-2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -478,7 +768,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/14/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/"
+  <a class="article-title" href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/"
     >c#学习日记(2)</a> 
 </h2>
  
@@ -487,7 +777,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/14/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="article-date">
+      <a href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="article-date">
   <time datetime="2024-08-14T07:01:36.000Z" itemprop="datePublished">2024-08-14</time>
 </a> 
   <div class="article-category">

@@ -29,59 +29,6 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(2)</title>
-    <url>/2024/08/14/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/</url>
-    <content><![CDATA[<h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><p>变量类型是类似于各种不同的容器类型，不同的容器类型可以装不同的东西。</p>
-<h2 id="常用变量类型及其关键字"><a href="#常用变量类型及其关键字" class="headerlink" title="常用变量类型及其关键字"></a>常用变量类型及其关键字</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>关键字</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>整数类型</td>
-<td>int</td>
-</tr>
-<tr>
-<td>字符类型</td>
-<td>string</td>
-</tr>
-<tr>
-<td>布尔类型</td>
-<td>bool</td>
-</tr>
-</tbody></table>
-<h3 id="变量类型-变量名"><a href="#变量类型-变量名" class="headerlink" title="变量类型 变量名;"></a><code>变量类型 变量名;</code></h3><p>这样的写法C#会自动给声明的变量赋予一个值这个值，这个值随着变量类型的改变而改变、</p>
-<p>如：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x;<span class="comment">//x = 0</span></span><br><span class="line"><span class="built_in">bool</span> y;<span class="comment">// y = false  </span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-<h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><p>在声明变量后，不能且不用再次声明变量，可以直接用赋值号<code>=</code> 来重新赋值</p>
-<p>如：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> holle_zh = <span class="string">&quot;你好&quot;</span>;<span class="comment">//声明变量</span></span><br><span class="line"></span><br><span class="line">            holle_zh = <span class="string">&quot;你好啊&quot;</span>;<span class="comment">//重新赋值</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(holle_zh);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>运行结果为<code>你好啊</code></p>
-<p>下面是一个无效赋值语句，会产生编译时错误：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="number">10</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-<p>注意下面是个有效语句：</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x = <span class="number">100</span>;</span><br><span class="line">x = x + <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><p>简单的整数加法计算器</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第一个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> x;</span><br><span class="line">        x =Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第二个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> y;</span><br><span class="line">        y = Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> z;</span><br><span class="line">        z = x + y;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;计算结果为:&quot;</span>);</span><br><span class="line">        Console.WriteLine(z);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World!</title>
     <url>/2024/08/10/hello-world/</url>
     <content><![CDATA[<p>终于建好了啦，忙了三个小时，最后hoxe d上传到github那一步太痛苦了</p>
@@ -172,8 +119,61 @@
       </categories>
   </entry>
   <entry>
+    <title>c#学习日记(2)</title>
+    <url>/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/</url>
+    <content><![CDATA[<h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><p>变量类型是类似于各种不同的容器类型，不同的容器类型可以装不同的东西。</p>
+<h2 id="常用变量类型及其关键字"><a href="#常用变量类型及其关键字" class="headerlink" title="常用变量类型及其关键字"></a>常用变量类型及其关键字</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>整数类型</td>
+<td>int</td>
+</tr>
+<tr>
+<td>字符类型</td>
+<td>string</td>
+</tr>
+<tr>
+<td>布尔类型</td>
+<td>bool</td>
+</tr>
+</tbody></table>
+<h3 id="变量类型-变量名"><a href="#变量类型-变量名" class="headerlink" title="变量类型 变量名;"></a><code>变量类型 变量名;</code></h3><p>这样的写法C#会自动给声明的变量赋予一个值这个值，这个值随着变量类型的改变而改变、</p>
+<p>如：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x;<span class="comment">//x = 0</span></span><br><span class="line"><span class="built_in">bool</span> y;<span class="comment">// y = false  </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><p>在声明变量后，不能且不用再次声明变量，可以直接用赋值号<code>=</code> 来重新赋值</p>
+<p>如：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> holle_zh = <span class="string">&quot;你好&quot;</span>;<span class="comment">//声明变量</span></span><br><span class="line"></span><br><span class="line">            holle_zh = <span class="string">&quot;你好啊&quot;</span>;<span class="comment">//重新赋值</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(holle_zh);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行结果为<code>你好啊</code></p>
+<p>下面是一个无效赋值语句，会产生编译时错误：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="number">10</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<p>注意下面是个有效语句：</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> x = <span class="number">100</span>;</span><br><span class="line">x = x + <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><p>简单的整数加法计算器</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第一个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> x;</span><br><span class="line">        x =Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第二个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> y;</span><br><span class="line">        y = Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> z;</span><br><span class="line">        z = x + y;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;计算结果为:&quot;</span>);</span><br><span class="line">        Console.WriteLine(z);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>c#学习日记(6)</title>
-    <url>/2024/08/18/csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/</url>
+    <url>/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/</url>
     <content><![CDATA[<h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><p>变量的作用域是程序中定义变量的那部分区域。变量的作用域决定了在程序的其他哪个部分可以访问该变量。C#中的变量作用域可以分为四种</p>
 <ol>
 <li>类级别（在类中定义，在类的任何地方都可以访问）</li>
@@ -201,5 +201,262 @@
       <categories>
         <category>c#学习日记</category>
       </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/</url>
+    <content><![CDATA[<hr>
+<p>title: c#学习日记(7)<br>date: 2024-08-19 14:34:46<br>tags:<br>categories: c#学习日记</p>
+<h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
+<p>try语句类似于if语句，若try语句内代码执行成功则不会执行catch语句内的代码</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//有可能报错的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//报错处理代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h1><p>return语句用于从当前方法中返回一个值，并终止该方法的执行。</p>
+<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 增加在输入计算数值时，输入非int可容纳的值的应对方法</li>
+</ul>
+<pre><code class="c#">using System;
+using System.Net.NetworkInformation;
+
+
+class Program
+    &#123;
+
+    static void Main()
+    &#123;
+
+        for (string PD = &quot;C&quot;; PD == &quot;C&quot; || PD == &quot;c&quot;;)//变量名取自&quot;判断&quot;的拼音首字母
+        &#123;
+            Console.WriteLine(&quot;请输入需要使用的运算方式;&quot;);
+            string FS = Console.ReadLine();//变量名取自&quot;方式&quot;的拼音首字母
+            
+            if (FS == &quot;加法&quot;)
+            &#123;
+                加法();
+            &#125;
+            else if (FS == &quot;减法&quot;)
+            &#123;
+                减法();
+            &#125;
+            else if (FS == &quot;乘法&quot;)
+            &#123;
+                乘法();
+            &#125;
+            else if (FS == &quot;除法&quot;)
+            &#123;
+                除法();
+            &#125;
+            else if (FS == &quot;比大小&quot;)
+            &#123;
+                比大小();
+            &#125;
+            else
+            &#123;
+                失败(FS);
+
+            &#125;
+
+            Console.WriteLine(&quot;按C键继续，按其他键退出:&quot;);
+            PD = Console.ReadLine();
+            
+        &#125;
+        
+    &#125;
+
+
+    static void 加法()
+        &#123;
+            Console.WriteLine(&quot;请输入第一个加数&quot;);
+            int x;
+            try 
+            &#123;     
+                 x = Convert.ToInt32(Console.ReadLine());
+            &#125;
+            catch
+            &#123;
+                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
+                 return;
+            &#125;
+            
+        
+            Console.WriteLine(&quot;请输入第二个加数&quot;);
+            int y;
+
+            try 
+            &#123;
+                 y = Convert.ToInt32(Console.ReadLine());
+            &#125;
+             catch
+            &#123;
+                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
+                 return;
+            &#125;
+
+
+        int z;
+            z = x + y;
+            Console.WriteLine(&quot;计算结果为:&quot;);
+            Console.WriteLine(z);
+
+        &#125;
+
+    static void 减法()
+    &#123;
+        Console.WriteLine(&quot;请输入被减数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入减数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        int z;
+        z = x - y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+
+    &#125;
+
+    static void 乘法()
+    &#123;
+        Console.WriteLine(&quot;请输入第一个乘数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入第二个乘数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+
+        int z;
+        z = x * y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+ 
+    &#125;
+
+    static void 除法()
+    &#123;
+        Console.WriteLine(&quot;请输入被除数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入除数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        int z;
+        z = x / y;
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        Console.WriteLine(z);
+
+    &#125;
+
+    static void 比大小()
+    &#123;
+        Console.WriteLine(&quot;请输入比较大小的数&quot;);
+        int x;
+        try
+        &#123;
+            x = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;请输入比较大小的数&quot;);
+        int y;
+        try
+        &#123;
+            y = Convert.ToInt32(Console.ReadLine());
+        &#125;
+        catch
+        &#123;
+            Console.WriteLine(&quot;抱歉请输入无效&quot;);
+            return;
+        &#125;
+
+        Console.WriteLine(&quot;计算结果为:&quot;);
+        if (x &gt; y)
+        &#123;
+            Console.WriteLine(x + &quot;&gt;&quot; + y);
+        &#125;
+        else if (x == y)
+        &#123;
+            Console.WriteLine(x + &quot;=&quot; + y);
+        &#125;
+        else
+        &#123;
+            Console.WriteLine(x + &quot;&lt;&quot; + y);
+        &#125;
+
+
+
+    &#125;
+
+
+    static void 失败(string fs)
+        &#123;
+        
+        Console.WriteLine(&quot;抱歉无法提供&quot; + fs + &quot;该计算方法&quot;);
+    &#125;
+
+      
+    
+    &#125;
+</code></pre>
+]]></content>
   </entry>
 </search>
