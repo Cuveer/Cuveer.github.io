@@ -459,4 +459,26 @@ class Program
 </code></pre>
 ]]></content>
   </entry>
+  <entry>
+    <title>C#学习日记(8)</title>
+    <url>/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/</url>
+    <content><![CDATA[<h1 id="类（Class）"><a href="#类（Class）" class="headerlink" title="类（Class）"></a>类（Class）</h1><p>当你定义一个类时，你定义了一个数据类型的蓝图，这实际上并没有定义任何的数据</p>
+<h2 id="声明类"><a href="#声明类" class="headerlink" title="声明类"></a>声明类</h2><p>类的定义是以关键字 class 开始，后跟类的名称。类的主体，包含在一对花括号内<br>语法如下:</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span>/<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line"> <span class="comment">//主体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>注public - 允许外部访问
+private - 不允许外部访问
+</code></pre>
+<p>​    </p>
+<h2 id="类在为外部调用"><a href="#类在为外部调用" class="headerlink" title="类在为外部调用"></a>类在为外部调用</h2><p>用法如下:</p>
+<p>例一:</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">A</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> <span class="keyword">var</span> = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">B</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span>;</span><br><span class="line">    &#123;</span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">        Console.WriteLine(a.<span class="keyword">var</span>);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>例二:</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">B</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        A a = <span class="keyword">new</span> A();</span><br><span class="line">        a.<span class="keyword">var</span> = <span class="number">2</span>;</span><br><span class="line">        a.Writer();</span><br><span class="line">        Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">A</span></span><br><span class="line">&#123; </span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">int</span> <span class="keyword">var</span> = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Writer</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="keyword">var</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
 </search>
