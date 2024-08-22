@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Cuveer &#39;s blog</title>
+      <title>c#学习日记(10) |  Cuveer &#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -64,24 +64,38 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Csharp学习日记-7"
+  id="post-Csharp学习日记/Csharp学习日记-10"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  c#学习日记(10)
+</h1>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" class="article-date">
-  <time datetime="2024-08-19T06:34:46.495Z" itemprop="datePublished">2024-08-19</time>
-</a>   
+      <a href="/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/" class="article-date">
+  <time datetime="2024-08-22T06:35:15.000Z" itemprop="datePublished">2024-08-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">876</span>
+            <span class="post-count">247</span>
         </span>
     </span>
 
@@ -90,7 +104,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -107,259 +121,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <hr>
-<p>title: c#学习日记(7)<br>date: 2024-08-19 14:34:46<br>tags:<br>categories: c#学习日记</p>
-<h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
-<p>try语句类似于if语句，若try语句内代码执行成功则不会执行catch语句内的代码</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//有可能报错的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//报错处理代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h1><p>return语句用于从当前方法中返回一个值，并终止该方法的执行。</p>
-<h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> 增加在输入计算数值时，输入非int可容纳的值的应对方法</li>
+  <h1 id="ChangeFile-exe-文件处理"><a href="#ChangeFile-exe-文件处理" class="headerlink" title="ChangeFile.exe(文件处理)"></a>ChangeFile.exe(文件处理)</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
+<li><input checked="" disabled="" type="checkbox"> 基础询问模块</li>
+<li><input checked="" disabled="" type="checkbox"> 删除成功模块</li>
+<li><input disabled="" type="checkbox"> 删除失败模块</li>
+<li><input disabled="" type="checkbox"> 更多文件处理模块</li>
 </ul>
-<pre><code class="c#">using System;
-using System.Net.NetworkInformation;
-
-
-class Program
-    &#123;
-
-    static void Main()
-    &#123;
-
-        for (string PD = &quot;C&quot;; PD == &quot;C&quot; || PD == &quot;c&quot;;)//变量名取自&quot;判断&quot;的拼音首字母
-        &#123;
-            Console.WriteLine(&quot;请输入需要使用的运算方式;&quot;);
-            string FS = Console.ReadLine();//变量名取自&quot;方式&quot;的拼音首字母
-            
-            if (FS == &quot;加法&quot;)
-            &#123;
-                加法();
-            &#125;
-            else if (FS == &quot;减法&quot;)
-            &#123;
-                减法();
-            &#125;
-            else if (FS == &quot;乘法&quot;)
-            &#123;
-                乘法();
-            &#125;
-            else if (FS == &quot;除法&quot;)
-            &#123;
-                除法();
-            &#125;
-            else if (FS == &quot;比大小&quot;)
-            &#123;
-                比大小();
-            &#125;
-            else
-            &#123;
-                失败(FS);
-
-            &#125;
-
-            Console.WriteLine(&quot;按C键继续，按其他键退出:&quot;);
-            PD = Console.ReadLine();
-            
-        &#125;
-        
-    &#125;
-
-
-    static void 加法()
-        &#123;
-            Console.WriteLine(&quot;请输入第一个加数&quot;);
-            int x;
-            try 
-            &#123;     
-                 x = Convert.ToInt32(Console.ReadLine());
-            &#125;
-            catch
-            &#123;
-                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
-                 return;
-            &#125;
-            
-        
-            Console.WriteLine(&quot;请输入第二个加数&quot;);
-            int y;
-
-            try 
-            &#123;
-                 y = Convert.ToInt32(Console.ReadLine());
-            &#125;
-             catch
-            &#123;
-                 Console.WriteLine(&quot;抱歉请输入无效&quot;);
-                 return;
-            &#125;
-
-
-        int z;
-            z = x + y;
-            Console.WriteLine(&quot;计算结果为:&quot;);
-            Console.WriteLine(z);
-
-        &#125;
-
-    static void 减法()
-    &#123;
-        Console.WriteLine(&quot;请输入被减数&quot;);
-        int x;
-        try
-        &#123;
-            x = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        Console.WriteLine(&quot;请输入减数&quot;);
-        int y;
-        try
-        &#123;
-            y = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        int z;
-        z = x - y;
-        Console.WriteLine(&quot;计算结果为:&quot;);
-        Console.WriteLine(z);
-
-    &#125;
-
-    static void 乘法()
-    &#123;
-        Console.WriteLine(&quot;请输入第一个乘数&quot;);
-        int x;
-        try
-        &#123;
-            x = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        Console.WriteLine(&quot;请输入第二个乘数&quot;);
-        int y;
-        try
-        &#123;
-            y = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-
-        int z;
-        z = x * y;
-        Console.WriteLine(&quot;计算结果为:&quot;);
-        Console.WriteLine(z);
- 
-    &#125;
-
-    static void 除法()
-    &#123;
-        Console.WriteLine(&quot;请输入被除数&quot;);
-        int x;
-        try
-        &#123;
-            x = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        Console.WriteLine(&quot;请输入除数&quot;);
-        int y;
-        try
-        &#123;
-            y = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        int z;
-        z = x / y;
-        Console.WriteLine(&quot;计算结果为:&quot;);
-        Console.WriteLine(z);
-
-    &#125;
-
-    static void 比大小()
-    &#123;
-        Console.WriteLine(&quot;请输入比较大小的数&quot;);
-        int x;
-        try
-        &#123;
-            x = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        Console.WriteLine(&quot;请输入比较大小的数&quot;);
-        int y;
-        try
-        &#123;
-            y = Convert.ToInt32(Console.ReadLine());
-        &#125;
-        catch
-        &#123;
-            Console.WriteLine(&quot;抱歉请输入无效&quot;);
-            return;
-        &#125;
-
-        Console.WriteLine(&quot;计算结果为:&quot;);
-        if (x &gt; y)
-        &#123;
-            Console.WriteLine(x + &quot;&gt;&quot; + y);
-        &#125;
-        else if (x == y)
-        &#123;
-            Console.WriteLine(x + &quot;=&quot; + y);
-        &#125;
-        else
-        &#123;
-            Console.WriteLine(x + &quot;&lt;&quot; + y);
-        &#125;
-
-
-
-    &#125;
-
-
-    static void 失败(string fs)
-        &#123;
-        
-        Console.WriteLine(&quot;抱歉无法提供&quot; + fs + &quot;该计算方法&quot;);
-    &#125;
-
-      
-    
-    &#125;
-</code></pre>
- 
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//记录路径</span></span><br><span class="line">            <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//获取文件</span></span><br><span class="line">            DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path); </span><br><span class="line">            FileInfo[] files = root.GetFiles();</span><br><span class="line">            List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//循环获取并打印数据</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(listFiles[i].Name);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//询问操作</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 文件名 = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 操作 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//执行操作</span></span><br><span class="line">            <span class="keyword">if</span>(操作 == <span class="string">&quot;1&quot;</span>) </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                    &#123;</span><br><span class="line">                        File.Delete(listFiles[i].FullName);</span><br><span class="line">                        Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -423,7 +192,7 @@ class Program
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -434,19 +203,10 @@ class Program
    
   <nav class="article-nav">
     
-      <a href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            C#学习日记(8)
-          
-        </div>
-      </a>
     
-    
-      <a href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-nav-link">
+      <a href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">c#学习日记(6)</div>
+        <div class="article-nav-title">c#学习日记(9)</div>
       </a>
     
   </nav>

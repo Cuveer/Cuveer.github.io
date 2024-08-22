@@ -176,7 +176,7 @@
     
     
     <article
-  id="post-Csharp学习日记-9"
+  id="post-Csharp学习日记/Csharp学习日记-10"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -187,7 +187,67 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/"
+  <a class="article-title" href="/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/"
+    >c#学习日记(10)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/" class="article-date">
+  <time datetime="2024-08-22T06:35:15.000Z" itemprop="datePublished">2024-08-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
+  </div>
+  
+
+ 
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="ChangeFile-exe-文件处理"><a href="#ChangeFile-exe-文件处理" class="headerlink" title="ChangeFile.exe(文件处理)"></a>ChangeFile.exe(文件处理)</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
+<li><input checked="" disabled="" type="checkbox"> 基础询问模块</li>
+<li><input checked="" disabled="" type="checkbox"> 删除成功模块</li>
+<li><input disabled="" type="checkbox"> 删除失败模块</li>
+<li><input disabled="" type="checkbox"> 更多文件处理模块</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//记录路径</span></span><br><span class="line">            <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//获取文件</span></span><br><span class="line">            DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path); </span><br><span class="line">            FileInfo[] files = root.GetFiles();</span><br><span class="line">            List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//循环获取并打印数据</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(listFiles[i].Name);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//询问操作</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 文件名 = Console.ReadLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 操作 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//执行操作</span></span><br><span class="line">            <span class="keyword">if</span>(操作 == <span class="string">&quot;1&quot;</span>) </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                    &#123;</span><br><span class="line">                        File.Delete(listFiles[i].FullName);</span><br><span class="line">                        Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            Console.ReadKey();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-Csharp学习日记/Csharp学习日记-9"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/"
     >c#学习日记(9)</a> 
 </h2>
  
@@ -196,7 +256,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/" class="article-date">
+      <a href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/" class="article-date">
   <time datetime="2024-08-21T06:25:51.000Z" itemprop="datePublished">2024-08-21</time>
 </a> 
   <div class="article-category">
@@ -232,7 +292,7 @@
 
     
     <article
-  id="post-Csharp学习日记-8"
+  id="post-Csharp学习日记/Csharp学习日记-8"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -243,7 +303,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/"
+  <a class="article-title" href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/"
     >C#学习日记(8)</a> 
 </h2>
  
@@ -252,7 +312,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/" class="article-date">
+      <a href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/" class="article-date">
   <time datetime="2024-08-20T05:36:52.000Z" itemprop="datePublished">2024-08-20</time>
 </a> 
   <div class="article-category">
@@ -299,27 +359,40 @@ private - 不允许外部访问
 
     
     <article
-  id="post-Csharp学习日记-7"
+  id="post-Csharp学习日记/Csharp学习日记-7"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/"
+    >c#学习日记(7)</a> 
+</h2>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" class="article-date">
-  <time datetime="2024-08-19T06:34:46.495Z" itemprop="datePublished">2024-08-19</time>
-</a>   
+      <a href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" class="article-date">
+  <time datetime="2024-08-19T06:34:46.000Z" itemprop="datePublished">2024-08-19</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
+  </div>
+  
 
  
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <hr>
-<p>title: c#学习日记(7)<br>date: 2024-08-19 14:34:46<br>tags:<br>categories: c#学习日记</p>
-<h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
+  <h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
 <p>try语句类似于if语句，若try语句内代码执行成功则不会执行catch语句内的代码</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//有可能报错的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//报错处理代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -589,7 +662,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-6"
+  id="post-Csharp学习日记/Csharp学习日记-6"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -600,7 +673,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/"
+  <a class="article-title" href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/"
     >c#学习日记(6)</a> 
 </h2>
  
@@ -609,7 +682,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-date">
+      <a href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-date">
   <time datetime="2024-08-18T08:55:00.000Z" itemprop="datePublished">2024-08-18</time>
 </a> 
   <div class="article-category">
@@ -665,7 +738,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-5"
+  id="post-Csharp学习日记/Csharp学习日记-5"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -676,7 +749,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/"
+  <a class="article-title" href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/"
     >C#学习日记(5)</a> 
 </h2>
  
@@ -685,7 +758,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/" class="article-date">
+      <a href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/" class="article-date">
   <time datetime="2024-08-17T13:32:29.000Z" itemprop="datePublished">2024-08-17</time>
 </a> 
   <div class="article-category">
@@ -738,7 +811,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-4"
+  id="post-Csharp学习日记/Csharp学习日记-4"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -749,7 +822,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/"
+  <a class="article-title" href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/"
     >C#学习日记(4)</a> 
 </h2>
  
@@ -758,7 +831,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/" class="article-date">
+      <a href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/" class="article-date">
   <time datetime="2024-08-16T07:16:24.000Z" itemprop="datePublished">2024-08-16</time>
 </a> 
   <div class="article-category">
@@ -814,7 +887,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-3"
+  id="post-Csharp学习日记/Csharp学习日记-3"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -825,7 +898,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/"
+  <a class="article-title" href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/"
     >C#学习日记(3)</a> 
 </h2>
  
@@ -834,7 +907,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/" class="article-date">
+      <a href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/" class="article-date">
   <time datetime="2024-08-15T07:58:28.000Z" itemprop="datePublished">2024-08-15</time>
 </a> 
   <div class="article-category">
@@ -880,7 +953,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-2"
+  id="post-Csharp学习日记/Csharp学习日记-2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -891,7 +964,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/"
+  <a class="article-title" href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/"
     >c#学习日记(2)</a> 
 </h2>
  
@@ -900,7 +973,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="article-date">
+      <a href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="article-date">
   <time datetime="2024-08-14T07:01:36.000Z" itemprop="datePublished">2024-08-14</time>
 </a> 
   <div class="article-category">
@@ -978,7 +1051,7 @@ class Program
 
     
     <article
-  id="post-Csharp学习日记-1"
+  id="post-Csharp学习日记/Csharp学习日记-1"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -989,7 +1062,7 @@ class Program
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/"
+  <a class="article-title" href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/"
     >c#学习日记(1)</a> 
 </h2>
  
@@ -998,7 +1071,7 @@ class Program
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/" class="article-date">
+      <a href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/" class="article-date">
   <time datetime="2024-08-13T12:18:51.000Z" itemprop="datePublished">2024-08-13</time>
 </a> 
   <div class="article-category">
@@ -1050,64 +1123,14 @@ class Program
 </article>
 
     
-    <article
-  id="post-hello-world"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/08/10/hello-world/"
-    >Hello World!</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/08/10/hello-world/" class="article-date">
-  <time datetime="2024-08-10T10:26:43.282Z" itemprop="datePublished">2024-08-10</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
-  </div>
-  
-
- 
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>终于建好了啦，忙了三个小时，最后hoxe d上传到github那一步太痛苦了</p>
-<p>中间开加速器的时候老是占用npm用的22端口，还要.shh文件里建个config才能让npm调用433端口​😅​</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
   </article>
   
 
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
   
 </section>
 </div>

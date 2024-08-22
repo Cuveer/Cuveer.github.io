@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>c#学习日记(6) |  Cuveer &#39;s blog</title>
+      <title>c#学习日记(9) |  Cuveer &#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -64,7 +64,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Csharp学习日记-6"
+  id="post-Csharp学习日记/Csharp学习日记-9"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -75,7 +75,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  c#学习日记(6)
+  c#学习日记(9)
 </h1>
  
 
@@ -83,8 +83,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" class="article-date">
-  <time datetime="2024-08-18T08:55:00.000Z" itemprop="datePublished">2024-08-18</time>
+      <a href="/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/" class="article-date">
+  <time datetime="2024-08-21T06:25:51.000Z" itemprop="datePublished">2024-08-21</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">303</span>
+            <span class="post-count">137</span>
         </span>
     </span>
 
@@ -121,29 +121,9 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><p>变量的作用域是程序中定义变量的那部分区域。变量的作用域决定了在程序的其他哪个部分可以访问该变量。C#中的变量作用域可以分为四种</p>
-<ol>
-<li>类级别（在类中定义，在类的任何地方都可以访问）</li>
-<li>方法级别（在方法内定义，只能在该方法内访问）</li>
-<li>循环级别（在循环体内定义，只能在该循环体内访问）</li>
-<li>块级别（在代码块中定义，只能在该代码块内访问)</li>
-</ol>
-<h1 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h1><h2 id="parse法"><a href="#parse法" class="headerlink" title="parse法"></a>parse法</h2><p>只支持将string类型转成int，Parse就是把String类型转换成int,char,double…等,也就是*.Parse(string) 括号中的一定要是string类型。</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量类型.Parse(字符串)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Tostring法"><a href="#Tostring法" class="headerlink" title=".Tostring法"></a>.Tostring法</h2><p> 任意类型转化为string类型，语法如下:</p>
- <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名.Tostring();</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Convert法"><a href="#Convert法" class="headerlink" title="Convert法"></a>Convert法</h2><p>C# Convert 方法是数据类型转换中最灵活的方法，它能够将任意数据类型的值转换成任意数据类型，前提是不要超出指定数据类型的范围</p>
-<p>具体的语法形式如下:</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量类型类型 变量名 = convert.To变量类型(变量名);</span><br></pre></td></tr></table></figure>
-
-
-
+  <h1 id="Static修饰符"><a href="#Static修饰符" class="headerlink" title="Static修饰符"></a>Static修饰符</h1><p>使用 static 修饰符可声明属于类型本身而不是属于特定对象的静态成员。可以将 static 修饰符添加到本地函数。 静态本地函数无法捕获局部变量或实例状态。</p>
+<h1 id="代码抽离"><a href="#代码抽离" class="headerlink" title="代码抽离"></a>代码抽离</h1><h2 id="新建类"><a href="#新建类" class="headerlink" title="新建类"></a>新建类</h2><p>在VS的解决方案资源管理器中，右键解决方案，点击添加，点击类，再命名，点击添加即可</p>
+<h2 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h2><p>在原本的类文件中加上<code>using namespace_name</code>, 在新建的类文件中也加上<code>using namespace_name</code>即可</p>
  
       <!-- reward -->
       
@@ -208,7 +188,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -219,19 +199,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/" class="article-nav-link">
+      <a href="/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            (no title)
+            c#学习日记(10)
           
         </div>
       </a>
     
     
-      <a href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/" class="article-nav-link">
+      <a href="/2024/08/20/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-8/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">C#学习日记(5)</div>
+        <div class="article-nav-title">C#学习日记(8)</div>
       </a>
     
   </nav>
