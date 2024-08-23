@@ -176,6 +176,69 @@
     
     
     <article
+  id="post-Csharp学习日记/Csharp学习日记-11"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/08/23/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-11/"
+    >C#学习日记(11)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/08/23/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-11/" class="article-date">
+  <time datetime="2024-08-23T06:35:56.000Z" itemprop="datePublished">2024-08-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
+  </div>
+  
+
+ 
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="ChangeFile-2-0"><a href="#ChangeFile-2-0" class="headerlink" title="ChangeFile 2.0"></a>ChangeFile 2.0</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
+<li><input checked="" disabled="" type="checkbox"> 基础询问</li>
+<li><input checked="" disabled="" type="checkbox"> 文件名错误检查</li>
+<li><input checked="" disabled="" type="checkbox"> 删除模</li>
+<li><input checked="" disabled="" type="checkbox"> 重命名</li>
+<li><input disabled="" type="checkbox"> 更多文件处理</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.FileIO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.Devices;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">string</span> 确认程序循环 =<span class="string">&quot;C&quot;</span>; 确认程序循环 == <span class="string">&quot;C&quot;</span> || 确认程序循环 == <span class="string">&quot;c&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//记录路径</span></span><br><span class="line">                <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//获取文件</span></span><br><span class="line">                DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">                FileInfo[] files = root.GetFiles();</span><br><span class="line">                List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//建立基础变量</span></span><br><span class="line">                <span class="built_in">string</span> 文件名 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                <span class="built_in">string</span> 文件路径 = <span class="string">&quot;未赋值&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//循环获取并打印数据</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;在文件路径中...&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(listFiles[i].Name);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">string</span> 确认检查询问循环 = <span class="string">&quot;C&quot;</span>; 确认检查询问循环 == <span class="string">&quot;c&quot;</span> || 确认检查询问循环 == <span class="string">&quot;C&quot;</span>; )</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    <span class="comment">//询问操作</span></span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">                    文件名 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//检查文件名是否正确</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                        &#123;</span><br><span class="line"></span><br><span class="line">                            文件路径 = listFiles[i].FullName;<span class="comment">//赋文件路径到文件路径变量</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//文件名错误处理</span></span><br><span class="line">                    <span class="keyword">if</span> (文件路径 == <span class="string">&quot;未赋值&quot;</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;抱歉为找到&quot;</span> + 文件名);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;请核查文件名是否输入错误&quot;</span>);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                        确认检查询问循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//询问操作</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;重命名[2]&quot;</span>);</span><br><span class="line">                <span class="built_in">string</span> 操作 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//执行操作</span></span><br><span class="line">                <span class="keyword">if</span> (操作 == <span class="string">&quot;1&quot;</span>) <span class="comment">//删除模块</span></span><br><span class="line">                &#123;</span><br><span class="line">                    File.Delete(文件路径);</span><br><span class="line">                    Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (操作 == <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;将&quot;</span> + 文件名 + <span class="string">&quot;重命名成;&quot;</span>);</span><br><span class="line">                    <span class="built_in">string</span> 新文件名 = Console.ReadLine();</span><br><span class="line">                    Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">                    computer.FileSystem.RenameFile(文件路径, 新文件名);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;文件重命名成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                确认程序循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-Csharp学习日记/Csharp学习日记-10"
   class="article article-type-post"
   itemscope
@@ -1031,79 +1094,6 @@ class Program
 <h1 id="小作品"><a href="#小作品" class="headerlink" title="小作品"></a>小作品</h1><p>简单的整数加法计算器</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第一个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> x;</span><br><span class="line">        x =Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;请输入需要计算的的第二个加数&quot;</span>);</span><br><span class="line">        <span class="built_in">int</span> y;</span><br><span class="line">        y = Convert.ToInt32(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> z;</span><br><span class="line">        z = x + y;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;计算结果为:&quot;</span>);</span><br><span class="line">        Console.WriteLine(z);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-Csharp学习日记/Csharp学习日记-1"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/"
-    >c#学习日记(1)</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/" class="article-date">
-  <time datetime="2024-08-13T12:18:51.000Z" itemprop="datePublished">2024-08-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-  
-
- 
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="初始变量"><a href="#初始变量" class="headerlink" title="初始变量"></a>初始变量</h1><p>   一个变量只不过是一个供程序操作的存储区的名字</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//赋初始值: 变量类型 变量名 - 初始值; 或 变量类型 变量名;</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//运算: 变量名a = 变量名b +-*/ 变量名c;</span></span><br><span class="line"> x = y + z;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><p>命名空间的设计目的是提供一种让一组名称与其他名称分隔开的方式。在一个命名空间中声明的类的名称与另一个命名空间中声明的相同的类的名称不冲突。简单来说就是方便我们访问<strong>模块</strong></p>
-<p>例如要用.NET提供的方法writeline()方法，就需要调用system这个模块</p>
-<h2 id="using-namespace-name"><a href="#using-namespace-name" class="headerlink" title="using namespace_name"></a>using namespace_name</h2><p>下面两份代码作用完全一样</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        System.Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        System.Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;holle world&quot;</span>);</span><br><span class="line">        Console.ReadKey();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>using</code> 偷懒神器！！</p>
-<h1 id="class"><a href="#class" class="headerlink" title="class"></a>class</h1><p>当你定义一个类时，你定义了一个数据类型的蓝图。这实际上并没有定义任何的数据，但它定义了类的名称意味着什么，也就是说，类的对象由什么组成及在这个对象上可执行什么操作。对象是类的实例。构成类的方法和变量称为类的成员。</p>
-<p>例如要用.NET提供的writeline()方法，就要调用system模块下的console类</p>
-<p><em>也即是说模块包含类</em></p>
  
       <!-- reward -->
       
