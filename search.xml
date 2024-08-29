@@ -536,4 +536,127 @@ private - 不允许外部访问
         <category>c#学习日记</category>
       </categories>
   </entry>
+  <entry>
+    <title>C#学习日记(13)</title>
+    <url>/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/</url>
+    <content><![CDATA[<h1 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h1><h2 id="布尔比较运算符"><a href="#布尔比较运算符" class="headerlink" title="布尔比较运算符"></a>布尔比较运算符</h2><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;&#x3D;</td>
+<td><code>var1 = var2 == var3</code></td>
+<td>如果var2等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;</td>
+<td><code>var1 = var2 != var3</code></td>
+<td>如果var2不等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td><code>var1 =  var2 &lt; var3</code></td>
+<td>如果var2小于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td><code>var1 =  var2 &gt; var3</code></td>
+<td>如果var2大于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&lt;&#x3D;</td>
+<td><code>var1 =  var2 &lt;= var3</code></td>
+<td>如果var2小于等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&gt;&#x3D;</td>
+<td><code>var1 =  var2 &gt;= var3</code></td>
+<td>如果var2大于等于var3，var1为true，否则为flase</td>
+</tr>
+</tbody></table>
+<h2 id="布尔逻辑运算"><a href="#布尔逻辑运算" class="headerlink" title="布尔逻辑运算"></a>布尔逻辑运算</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>!</td>
+<td><code>var1 = ! var2</code></td>
+<td>如果var2是flase，var1为true，否则为flase(非逻辑)</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td><code>var1 = var2 &amp; var 3</code></td>
+<td>如果var2和var3都是true，var1为true，否则为flase(与逻辑)</td>
+</tr>
+<tr>
+<td>|</td>
+<td>&#96;var1 &#x3D; var2</td>
+<td>var 3&#96;</td>
+</tr>
+<tr>
+<td>^</td>
+<td><code>var1 = var2 ^ var 3</code></td>
+<td>如果var2或var3中有且只有一个是true，var1为true，否则为flase(异或逻辑)</td>
+</tr>
+</tbody></table>
+<h3 id="与逻辑和或逻辑的优化运算符"><a href="#与逻辑和或逻辑的优化运算符" class="headerlink" title="与逻辑和或逻辑的优化运算符"></a>与逻辑和或逻辑的优化运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp;</td>
+<td><code>var1 = var2 &amp;&amp; var3 </code></td>
+<td>与&amp;运算符相同</td>
+</tr>
+<tr>
+<td>||</td>
+<td>&#96;var1 &#x3D; var2</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>&amp;&amp; 和 || 是 &amp; 和|的*<strong>优化运算符</strong></p>
+<h2 id="布尔赋值运算符"><a href="#布尔赋值运算符" class="headerlink" title="布尔赋值运算符"></a>布尔赋值运算符</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&#x3D;</td>
+<td>var1 &amp;&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 &amp; var2</td>
+</tr>
+<tr>
+<td>|&#x3D;</td>
+<td>var1 |&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 | var2</td>
+</tr>
+<tr>
+<td>^</td>
+<td>var1 ^&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 ^ var2</td>
+</tr>
+</tbody></table>
+<h1 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;test&gt; ? &lt;resultIfTrue&gt; :  &lt;resultIfFlase&gt;</span><br></pre></td></tr></table></figure>
+
+<p>计算<code>&lt;test&gt;</code>为一个bool值，若<code>&lt;test&gt;</code>为true，则结果为<code>&lt;resultIfTrue&gt;</code>，否则则反之</p>
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
 </search>
