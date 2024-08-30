@@ -11,7 +11,7 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(1)</title>
+    <title>C#学习日记(1)</title>
     <url>/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/</url>
     <content><![CDATA[<h1 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">class_name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -39,7 +39,7 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(10)</title>
+    <title>C#学习日记(10)</title>
     <url>/2024/08/22/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-10/</url>
     <content><![CDATA[<h1 id="ChangeFile-exe-文件处理"><a href="#ChangeFile-exe-文件处理" class="headerlink" title="ChangeFile.exe(文件处理)"></a>ChangeFile.exe(文件处理)</h1><ul>
 <li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
@@ -54,7 +54,7 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(2)</title>
+    <title>C#学习日记(2)</title>
     <url>/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/</url>
     <content><![CDATA[<h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><p>变量类型是类似于各种不同的容器类型，不同的容器类型可以装不同的东西。</p>
 <h2 id="常用变量类型及其关键字"><a href="#常用变量类型及其关键字" class="headerlink" title="常用变量类型及其关键字"></a>常用变量类型及其关键字</h2><table>
@@ -187,7 +187,7 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(6)</title>
+    <title>C#学习日记(6)</title>
     <url>/2024/08/18/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-6/</url>
     <content><![CDATA[<h1 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h1><p>变量的作用域是程序中定义变量的那部分区域。变量的作用域决定了在程序的其他哪个部分可以访问该变量。C#中的变量作用域可以分为四种</p>
 <ol>
@@ -218,7 +218,7 @@
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(7)</title>
+    <title>C#学习日记(7)</title>
     <url>/2024/08/19/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-7/</url>
     <content><![CDATA[<h1 id="try语句"><a href="#try语句" class="headerlink" title="try语句"></a>try语句</h1><p>  try语句是一种用于捕获和处理异常的结构。通过try语句，我们可以编写代码来处理可能发生的异常情况，从而改善程序的稳定性和可靠性</p>
 <p>try语句类似于if语句，若try语句内代码执行成功则不会执行catch语句内的代码</p>
@@ -498,7 +498,7 @@ private - 不允许外部访问
       </categories>
   </entry>
   <entry>
-    <title>c#学习日记(9)</title>
+    <title>C#学习日记(9)</title>
     <url>/2024/08/21/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-9/</url>
     <content><![CDATA[<h1 id="Static修饰符"><a href="#Static修饰符" class="headerlink" title="Static修饰符"></a>Static修饰符</h1><p>使用 static 修饰符可声明属于类型本身而不是属于特定对象的静态成员。可以将 static 修饰符添加到本地函数。 静态本地函数无法捕获局部变量或实例状态。</p>
 <h1 id="代码抽离"><a href="#代码抽离" class="headerlink" title="代码抽离"></a>代码抽离</h1><h2 id="新建类"><a href="#新建类" class="headerlink" title="新建类"></a>新建类</h2><p>在VS的解决方案资源管理器中，右键解决方案，点击添加，点击类，再命名，点击添加即可</p>
@@ -549,32 +549,32 @@ private - 不允许外部访问
 </thead>
 <tbody><tr>
 <td align="center">&#x3D;&#x3D;</td>
-<td><code>var1 = var2 == var3</code></td>
+<td>var1 &#x3D; var2 &#x3D;&#x3D; var3</td>
 <td>如果var2等于var3，var1为true，否则为flase</td>
 </tr>
 <tr>
 <td align="center">!&#x3D;</td>
-<td><code>var1 = var2 != var3</code></td>
+<td>var1 &#x3D; var2 !&#x3D; var3</td>
 <td>如果var2不等于var3，var1为true，否则为flase</td>
 </tr>
 <tr>
 <td align="center">&lt;</td>
-<td><code>var1 =  var2 &lt; var3</code></td>
+<td>var1 &#x3D;  var2 &lt; var3</td>
 <td>如果var2小于var3，var1为true，否则为flase</td>
 </tr>
 <tr>
 <td align="center">&gt;</td>
-<td><code>var1 =  var2 &gt; var3</code></td>
+<td>var1 &#x3D;  var2 &gt; var3</td>
 <td>如果var2大于var3，var1为true，否则为flase</td>
 </tr>
 <tr>
 <td align="center">&lt;&#x3D;</td>
-<td><code>var1 =  var2 &lt;= var3</code></td>
+<td>var1 &#x3D;  var2 &lt;&#x3D; var3</td>
 <td>如果var2小于等于var3，var1为true，否则为flase</td>
 </tr>
 <tr>
 <td align="center">&gt;&#x3D;</td>
-<td><code>var1 =  var2 &gt;= var3</code></td>
+<td>var1 &#x3D;  var2 &gt;&#x3D; var3</td>
 <td>如果var2大于等于var3，var1为true，否则为flase</td>
 </tr>
 </tbody></table>
@@ -588,22 +588,22 @@ private - 不允许外部访问
 </thead>
 <tbody><tr>
 <td>!</td>
-<td><code>var1 = ! var2</code></td>
+<td>var1 &#x3D; ! var2</td>
 <td>如果var2是flase，var1为true，否则为flase(非逻辑)</td>
 </tr>
 <tr>
 <td>&amp;</td>
-<td><code>var1 = var2 &amp; var 3</code></td>
+<td>var1 &#x3D; var2 &amp; var 3</td>
 <td>如果var2和var3都是true，var1为true，否则为flase(与逻辑)</td>
 </tr>
 <tr>
 <td>|</td>
-<td>&#96;var1 &#x3D; var2</td>
-<td>var 3&#96;</td>
+<td>var1 &#x3D; var2</td>
+<td>var 3</td>
 </tr>
 <tr>
 <td>^</td>
-<td><code>var1 = var2 ^ var 3</code></td>
+<td>var1 &#x3D; var2 ^ var 3</td>
 <td>如果var2或var3中有且只有一个是true，var1为true，否则为flase(异或逻辑)</td>
 </tr>
 </tbody></table>
@@ -617,12 +617,12 @@ private - 不允许外部访问
 </thead>
 <tbody><tr>
 <td>&amp;&amp;</td>
-<td><code>var1 = var2 &amp;&amp; var3 </code></td>
+<td>var1 &#x3D; var2 &amp;&amp; var3</td>
 <td>与&amp;运算符相同</td>
 </tr>
 <tr>
 <td>||</td>
-<td>&#96;var1 &#x3D; var2</td>
+<td>var1 &#x3D; var2</td>
 <td></td>
 </tr>
 </tbody></table>
