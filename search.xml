@@ -54,6 +54,202 @@
       </categories>
   </entry>
   <entry>
+    <title>C#学习日记(11)</title>
+    <url>/2024/08/23/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-11/</url>
+    <content><![CDATA[<h1 id="ChangeFile-2-0"><a href="#ChangeFile-2-0" class="headerlink" title="ChangeFile 2.0"></a>ChangeFile 2.0</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
+<li><input checked="" disabled="" type="checkbox"> 基础询问</li>
+<li><input checked="" disabled="" type="checkbox"> 文件名错误检查</li>
+<li><input checked="" disabled="" type="checkbox"> 删除模</li>
+<li><input checked="" disabled="" type="checkbox"> 重命名</li>
+<li><input disabled="" type="checkbox"> 更多文件处理</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.FileIO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.Devices;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">string</span> 确认程序循环 =<span class="string">&quot;C&quot;</span>; 确认程序循环 == <span class="string">&quot;C&quot;</span> || 确认程序循环 == <span class="string">&quot;c&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//记录路径</span></span><br><span class="line">                <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//获取文件</span></span><br><span class="line">                DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">                FileInfo[] files = root.GetFiles();</span><br><span class="line">                List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//建立基础变量</span></span><br><span class="line">                <span class="built_in">string</span> 文件名 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                <span class="built_in">string</span> 文件路径 = <span class="string">&quot;未赋值&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//循环获取并打印数据</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;在文件路径中...&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(listFiles[i].Name);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">string</span> 确认检查询问循环 = <span class="string">&quot;C&quot;</span>; 确认检查询问循环 == <span class="string">&quot;c&quot;</span> || 确认检查询问循环 == <span class="string">&quot;C&quot;</span>; )</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    <span class="comment">//询问操作</span></span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">                    文件名 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//检查文件名是否正确</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                        &#123;</span><br><span class="line"></span><br><span class="line">                            文件路径 = listFiles[i].FullName;<span class="comment">//赋文件路径到文件路径变量</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//文件名错误处理</span></span><br><span class="line">                    <span class="keyword">if</span> (文件路径 == <span class="string">&quot;未赋值&quot;</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;抱歉为找到&quot;</span> + 文件名);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;请核查文件名是否输入错误&quot;</span>);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                        确认检查询问循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//询问操作</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;重命名[2]&quot;</span>);</span><br><span class="line">                <span class="built_in">string</span> 操作 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//执行操作</span></span><br><span class="line">                <span class="keyword">if</span> (操作 == <span class="string">&quot;1&quot;</span>) <span class="comment">//删除模块</span></span><br><span class="line">                &#123;</span><br><span class="line">                    File.Delete(文件路径);</span><br><span class="line">                    Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (操作 == <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;将&quot;</span> + 文件名 + <span class="string">&quot;重命名成;&quot;</span>);</span><br><span class="line">                    <span class="built_in">string</span> 新文件名 = Console.ReadLine();</span><br><span class="line">                    Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">                    computer.FileSystem.RenameFile(文件路径, 新文件名);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;文件重命名成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                确认程序循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C#学习日记(13)</title>
+    <url>/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/</url>
+    <content><![CDATA[<h1 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h1><h2 id="布尔比较运算符"><a href="#布尔比较运算符" class="headerlink" title="布尔比较运算符"></a>布尔比较运算符</h2><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;&#x3D;</td>
+<td>var1 &#x3D; var2 &#x3D;&#x3D; var3</td>
+<td>如果var2等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;</td>
+<td>var1 &#x3D; var2 !&#x3D; var3</td>
+<td>如果var2不等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td>var1 &#x3D;  var2 &lt; var3</td>
+<td>如果var2小于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td>var1 &#x3D;  var2 &gt; var3</td>
+<td>如果var2大于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&lt;&#x3D;</td>
+<td>var1 &#x3D;  var2 &lt;&#x3D; var3</td>
+<td>如果var2小于等于var3，var1为true，否则为flase</td>
+</tr>
+<tr>
+<td align="center">&gt;&#x3D;</td>
+<td>var1 &#x3D;  var2 &gt;&#x3D; var3</td>
+<td>如果var2大于等于var3，var1为true，否则为flase</td>
+</tr>
+</tbody></table>
+<h2 id="布尔逻辑运算"><a href="#布尔逻辑运算" class="headerlink" title="布尔逻辑运算"></a>布尔逻辑运算</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>!</td>
+<td>var1 &#x3D; ! var2</td>
+<td>如果var2是flase，var1为true，否则为flase(非逻辑)</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>var1 &#x3D; var2 &amp; var 3</td>
+<td>如果var2和var3都是true，var1为true，否则为flase(与逻辑)</td>
+</tr>
+<tr>
+<td>|</td>
+<td>var1 &#x3D; var2</td>
+<td>var 3</td>
+</tr>
+<tr>
+<td>^</td>
+<td>var1 &#x3D; var2 ^ var 3</td>
+<td>如果var2或var3中有且只有一个是true，var1为true，否则为flase(异或逻辑)</td>
+</tr>
+</tbody></table>
+<h3 id="与逻辑和或逻辑的优化运算符"><a href="#与逻辑和或逻辑的优化运算符" class="headerlink" title="与逻辑和或逻辑的优化运算符"></a>与逻辑和或逻辑的优化运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp;</td>
+<td>var1 &#x3D; var2 &amp;&amp; var3</td>
+<td>与&amp;运算符相同</td>
+</tr>
+<tr>
+<td>||</td>
+<td>var1 &#x3D; var2</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>&amp;&amp; 和 || 是 &amp; 和|的*<strong>优化运算符</strong></p>
+<h2 id="布尔赋值运算符"><a href="#布尔赋值运算符" class="headerlink" title="布尔赋值运算符"></a>布尔赋值运算符</h2><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>示例表达式</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&#x3D;</td>
+<td>var1 &amp;&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 &amp; var2</td>
+</tr>
+<tr>
+<td>|&#x3D;</td>
+<td>var1 |&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 | var2</td>
+</tr>
+<tr>
+<td>^</td>
+<td>var1 ^&#x3D; var2</td>
+<td>等于var1  &#x3D;var1 ^ var2</td>
+</tr>
+</tbody></table>
+<h1 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;test&gt; ? &lt;resultIfTrue&gt; :  &lt;resultIfFlase&gt;</span><br></pre></td></tr></table></figure>
+
+<p>计算<code>&lt;test&gt;</code>为一个bool值，若<code>&lt;test&gt;</code>为true，则结果为<code>&lt;resultIfTrue&gt;</code>，否则则反之</p>
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>c#学习日记(12)</title>
+    <url>/2024/08/24/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-12/</url>
+    <content><![CDATA[<h1 id="ChangeFile-V2-1"><a href="#ChangeFile-V2-1" class="headerlink" title="ChangeFile V2.1"></a>ChangeFile V2.1</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.FileIO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.Devices;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic;</span><br><span class="line"><span class="keyword">using</span> System.Runtime.InteropServices.WindowsRuntime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">//建立基础变量</span></span><br><span class="line">            <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line">            DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">            FileInfo[] files = root.GetFiles();</span><br><span class="line">            List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line">            <span class="built_in">string</span> 文件名 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="built_in">string</span> 文件路径 = <span class="string">&quot;未赋值&quot;</span>;</span><br><span class="line">            <span class="built_in">string</span> 操作 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="built_in">int</span> 结束 = <span class="number">2</span>;</span><br><span class="line">            class_打印文件数据.打印文件数据(listFiles);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">string</span> 确认程序循环 = <span class="string">&quot;c&quot;</span>; 确认程序循环 == <span class="string">&quot;C&quot;</span> || 确认程序循环 == <span class="string">&quot;c&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                结束 = class_检查文件.检查文件(文件路径, 文件名, listFiles, 结束);</span><br><span class="line">                <span class="keyword">if</span> (结束 == <span class="number">2</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                Console.ReadKey();</span><br><span class="line"></span><br><span class="line">                操作 = class_ask.Ask(操作);</span><br><span class="line">                <span class="comment">//执行操作</span></span><br><span class="line">                <span class="keyword">if</span> (操作 == <span class="string">&quot;1&quot;</span>) <span class="comment">//删除模块</span></span><br><span class="line">                &#123;</span><br><span class="line">                    class_执行.删除(文件路径,文件名);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (操作 == <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    class_执行.重命名(文件路径, 文件名);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                确认程序循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>执行</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 删除 (<span class="built_in">string</span> 文件路径,<span class="built_in">string</span> 文件名)</span><br><span class="line">        &#123;</span><br><span class="line">            File.Delete(文件路径);</span><br><span class="line">            Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 重命名(<span class="built_in">string</span> 文件路径, <span class="built_in">string</span> 文件名)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;将&quot;</span> + 文件名 + <span class="string">&quot;重命名成;&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 新文件名 = Console.ReadLine();</span><br><span class="line">            Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">            computer.FileSystem.RenameFile(文件路径, 新文件名);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;文件重命名成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>检查文件</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">int</span> 检查文件(<span class="built_in">string</span> 文件路径, <span class="built_in">string</span> 文件名, List&lt;FileInfo&gt;listFiles , <span class="built_in">int</span> 结束 )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> 确认检查询问循环 = <span class="string">&quot;C&quot;</span>;</span><br><span class="line">            <span class="keyword">for</span> (; 确认检查询问循环 == <span class="string">&quot;c&quot;</span> || 确认检查询问循环 == <span class="string">&quot;C&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//询问操作</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">                文件名 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//检查文件名是否正确</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                    &#123;</span><br><span class="line"></span><br><span class="line">                        文件路径 = listFiles[i].FullName;<span class="comment">//赋文件路径到文件路径变量</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                确认检查询问循环 = <span class="string">&quot;不循环&quot;</span>;</span><br><span class="line">                <span class="comment">//文件名错误处理</span></span><br><span class="line">                <span class="keyword">if</span> (文件路径 == <span class="string">&quot;未赋值&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;抱歉为找到&quot;</span> + 文件名);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;请核查文件名是否输入错误&quot;</span>);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                    确认检查询问循环 = Console.ReadLine();</span><br><span class="line">                    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (确认检查询问循环 != <span class="string">&quot;c&quot;</span> || 确认检查询问循环 != <span class="string">&quot;C&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                结束 = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> 结束;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>打印文件数据</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 打印文件数据(List&lt;FileInfo&gt;listFiles)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//循环获取并打印数据</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;获取文件路径中...&quot;</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(listFiles[i].Name);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_ask</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">Ask</span>(<span class="params"><span class="built_in">string</span> 操作</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;重命名[2]&quot;</span>);</span><br><span class="line">            操作 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">return</span> 操作;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C#学习日记(15)</title>
+    <url>/2024/08/31/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-15/</url>
+    <content><![CDATA[<h1 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h1><h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>不需要任何转换工作，也不需要另外编写代码.</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> var1 = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">double</span> var2;</span><br><span class="line">var2 = var1;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><p>要明确要求编译器把数值从一种数据类型转化为另一种.</p>
+<h3 id="Convert命令"><a href="#Convert命令" class="headerlink" title="Convert命令"></a>Convert命令</h3><p>可转换大多数变量</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Convert.To&lt;vartype&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>定义一个类型</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enum</span> &lt;typeName&gt;<span class="comment">//定义枚举</span></span><br><span class="line">&#123;</span><br><span class="line">   &lt;val1&gt;</span><br><span class="line">   &lt;val2&gt;</span><br><span class="line">   &lt;val3&gt;</span><br><span class="line">      ...</span><br><span class="line">    &lt;valN&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;typeName&gt; &lt;varName&gt; = &lt;typeName&gt;.&lt;valX&gt;;<span class="comment">//声明新类型的变量,并赋值</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C#学习日记(16)</title>
+    <url>/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/</url>
+    <content><![CDATA[<h1 id="窗体计算机"><a href="#窗体计算机" class="headerlink" title="窗体计算机"></a>窗体计算机</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 四则运算</li>
+<li><input disabled="" type="checkbox"> 输入非数字或其他值报错</li>
+<li><input disabled="" type="checkbox"> 优化界面</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">tools</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">textBox1_TextChanged</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox1.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox1.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox2.Text);</span><br><span class="line"></span><br><span class="line">                textBox3.Text = Convert.ToString(x + y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button2_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox4.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox4.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox5.Text);</span><br><span class="line"></span><br><span class="line">                textBox6.Text = Convert.ToString(x - y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button3_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox7.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox7.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox8.Text);</span><br><span class="line"></span><br><span class="line">                textBox9.Text = Convert.ToString(x * y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button4_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox10.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                </span><br><span class="line">                    <span class="built_in">double</span> x = Convert.ToDouble(textBox10.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox11.Text);</span><br><span class="line"></span><br><span class="line">                    textBox12.Text = Convert.ToString(x / y);</span><br><span class="line">                </span><br><span class="line">   </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button5_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Control c <span class="keyword">in</span> Controls)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 判断是否是TextBox控件</span></span><br><span class="line">                <span class="keyword">if</span> (c <span class="keyword">is</span> TextBox)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 将TextBox控件的Text属性设为空字符串来清空内容</span></span><br><span class="line">                    ((TextBox)c).Text = <span class="built_in">string</span>.Empty;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C#学习日记(2)</title>
     <url>/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/</url>
     <content><![CDATA[<h1 id="变量类型"><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h1><p>变量类型是类似于各种不同的容器类型，不同的容器类型可以装不同的东西。</p>
@@ -503,203 +699,6 @@ private - 不允许外部访问
     <content><![CDATA[<h1 id="Static修饰符"><a href="#Static修饰符" class="headerlink" title="Static修饰符"></a>Static修饰符</h1><p>使用 static 修饰符可声明属于类型本身而不是属于特定对象的静态成员。可以将 static 修饰符添加到本地函数。 静态本地函数无法捕获局部变量或实例状态。</p>
 <h1 id="代码抽离"><a href="#代码抽离" class="headerlink" title="代码抽离"></a>代码抽离</h1><h2 id="新建类"><a href="#新建类" class="headerlink" title="新建类"></a>新建类</h2><p>在VS的解决方案资源管理器中，右键解决方案，点击添加，点击类，再命名，点击添加即可</p>
 <h2 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h2><p>在原本的类文件中加上<code>using namespace_name</code>, 在新建的类文件中也加上<code>using namespace_name</code>即可</p>
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C#学习日记(11)</title>
-    <url>/2024/08/23/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-11/</url>
-    <content><![CDATA[<h1 id="ChangeFile-2-0"><a href="#ChangeFile-2-0" class="headerlink" title="ChangeFile 2.0"></a>ChangeFile 2.0</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> 基础获取文件信息</li>
-<li><input checked="" disabled="" type="checkbox"> 基础询问</li>
-<li><input checked="" disabled="" type="checkbox"> 文件名错误检查</li>
-<li><input checked="" disabled="" type="checkbox"> 删除模</li>
-<li><input checked="" disabled="" type="checkbox"> 重命名</li>
-<li><input disabled="" type="checkbox"> 更多文件处理</li>
-</ul>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.FileIO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.Devices;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">string</span> 确认程序循环 =<span class="string">&quot;C&quot;</span>; 确认程序循环 == <span class="string">&quot;C&quot;</span> || 确认程序循环 == <span class="string">&quot;c&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//记录路径</span></span><br><span class="line">                <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//获取文件</span></span><br><span class="line">                DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">                FileInfo[] files = root.GetFiles();</span><br><span class="line">                List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//建立基础变量</span></span><br><span class="line">                <span class="built_in">string</span> 文件名 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                <span class="built_in">string</span> 文件路径 = <span class="string">&quot;未赋值&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//循环获取并打印数据</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;在文件路径中...&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(listFiles[i].Name);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">string</span> 确认检查询问循环 = <span class="string">&quot;C&quot;</span>; 确认检查询问循环 == <span class="string">&quot;c&quot;</span> || 确认检查询问循环 == <span class="string">&quot;C&quot;</span>; )</span><br><span class="line">                &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                    <span class="comment">//询问操作</span></span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">                    文件名 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//检查文件名是否正确</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                        &#123;</span><br><span class="line"></span><br><span class="line">                            文件路径 = listFiles[i].FullName;<span class="comment">//赋文件路径到文件路径变量</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//文件名错误处理</span></span><br><span class="line">                    <span class="keyword">if</span> (文件路径 == <span class="string">&quot;未赋值&quot;</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;抱歉为找到&quot;</span> + 文件名);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;请核查文件名是否输入错误&quot;</span>);</span><br><span class="line">                        Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                        确认检查询问循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//询问操作</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;重命名[2]&quot;</span>);</span><br><span class="line">                <span class="built_in">string</span> 操作 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//执行操作</span></span><br><span class="line">                <span class="keyword">if</span> (操作 == <span class="string">&quot;1&quot;</span>) <span class="comment">//删除模块</span></span><br><span class="line">                &#123;</span><br><span class="line">                    File.Delete(文件路径);</span><br><span class="line">                    Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (操作 == <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;将&quot;</span> + 文件名 + <span class="string">&quot;重命名成;&quot;</span>);</span><br><span class="line">                    <span class="built_in">string</span> 新文件名 = Console.ReadLine();</span><br><span class="line">                    Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">                    computer.FileSystem.RenameFile(文件路径, 新文件名);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;文件重命名成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                确认程序循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>c#学习日记(12)</title>
-    <url>/2024/08/24/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-12/</url>
-    <content><![CDATA[<h1 id="ChangeFile-V2-1"><a href="#ChangeFile-V2-1" class="headerlink" title="ChangeFile V2.1"></a>ChangeFile V2.1</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.FileIO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic.Devices;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualBasic;</span><br><span class="line"><span class="keyword">using</span> System.Runtime.InteropServices.WindowsRuntime;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ChangeFile</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">//建立基础变量</span></span><br><span class="line">            <span class="built_in">string</span> path = <span class="string">&quot;C:\\Users\\Administrator\\Desktop&quot;</span>;</span><br><span class="line">            DirectoryInfo root = <span class="keyword">new</span> DirectoryInfo(path);</span><br><span class="line">            FileInfo[] files = root.GetFiles();</span><br><span class="line">            List&lt;FileInfo&gt; listFiles = files.ToList();</span><br><span class="line">            <span class="built_in">string</span> 文件名 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="built_in">string</span> 文件路径 = <span class="string">&quot;未赋值&quot;</span>;</span><br><span class="line">            <span class="built_in">string</span> 操作 = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            <span class="built_in">int</span> 结束 = <span class="number">2</span>;</span><br><span class="line">            class_打印文件数据.打印文件数据(listFiles);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">string</span> 确认程序循环 = <span class="string">&quot;c&quot;</span>; 确认程序循环 == <span class="string">&quot;C&quot;</span> || 确认程序循环 == <span class="string">&quot;c&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                结束 = class_检查文件.检查文件(文件路径, 文件名, listFiles, 结束);</span><br><span class="line">                <span class="keyword">if</span> (结束 == <span class="number">2</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                Console.ReadKey();</span><br><span class="line"></span><br><span class="line">                操作 = class_ask.Ask(操作);</span><br><span class="line">                <span class="comment">//执行操作</span></span><br><span class="line">                <span class="keyword">if</span> (操作 == <span class="string">&quot;1&quot;</span>) <span class="comment">//删除模块</span></span><br><span class="line">                &#123;</span><br><span class="line">                    class_执行.删除(文件路径,文件名);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (操作 == <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    class_执行.重命名(文件路径, 文件名);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                确认程序循环 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>执行</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 删除 (<span class="built_in">string</span> 文件路径,<span class="built_in">string</span> 文件名)</span><br><span class="line">        &#123;</span><br><span class="line">            File.Delete(文件路径);</span><br><span class="line">            Console.WriteLine(文件名 + <span class="string">&quot;删除成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 重命名(<span class="built_in">string</span> 文件路径, <span class="built_in">string</span> 文件名)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;将&quot;</span> + 文件名 + <span class="string">&quot;重命名成;&quot;</span>);</span><br><span class="line">            <span class="built_in">string</span> 新文件名 = Console.ReadLine();</span><br><span class="line">            Computer computer = <span class="keyword">new</span> Computer();</span><br><span class="line">            computer.FileSystem.RenameFile(文件路径, 新文件名);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;文件重命名成功&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>检查文件</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">int</span> 检查文件(<span class="built_in">string</span> 文件路径, <span class="built_in">string</span> 文件名, List&lt;FileInfo&gt;listFiles , <span class="built_in">int</span> 结束 )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> 确认检查询问循环 = <span class="string">&quot;C&quot;</span>;</span><br><span class="line">            <span class="keyword">for</span> (; 确认检查询问循环 == <span class="string">&quot;c&quot;</span> || 确认检查询问循环 == <span class="string">&quot;C&quot;</span>;)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                <span class="comment">//询问操作</span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;请问你要对哪个文件进行操作&quot;</span>);</span><br><span class="line">                文件名 = Console.ReadLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//检查文件名是否正确</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (文件名 == listFiles[i].Name)</span><br><span class="line">                    &#123;</span><br><span class="line"></span><br><span class="line">                        文件路径 = listFiles[i].FullName;<span class="comment">//赋文件路径到文件路径变量</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                确认检查询问循环 = <span class="string">&quot;不循环&quot;</span>;</span><br><span class="line">                <span class="comment">//文件名错误处理</span></span><br><span class="line">                <span class="keyword">if</span> (文件路径 == <span class="string">&quot;未赋值&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;抱歉为找到&quot;</span> + 文件名);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;请核查文件名是否输入错误&quot;</span>);</span><br><span class="line">                    Console.WriteLine(<span class="string">&quot;若要重新运行程序请按C键，若要关闭请按其他键...&quot;</span>);</span><br><span class="line">                    确认检查询问循环 = Console.ReadLine();</span><br><span class="line">                    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (确认检查询问循环 != <span class="string">&quot;c&quot;</span> || 确认检查询问循环 != <span class="string">&quot;C&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                结束 = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> 结束;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_</span>打印文件数据</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 打印文件数据(List&lt;FileInfo&gt;listFiles)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//循环获取并打印数据</span></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;获取文件路径中...&quot;</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;你桌面的所有文件:&quot;</span>);</span><br><span class="line">            Console.ReadKey();</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; listFiles.Count; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(listFiles[i].Name);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">class_ask</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">Ask</span>(<span class="params"><span class="built_in">string</span> 操作</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;请问你要执行什么操作&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;删除[1]&quot;</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;重命名[2]&quot;</span>);</span><br><span class="line">            操作 = Console.ReadLine();</span><br><span class="line">            <span class="keyword">return</span> 操作;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C#学习日记(13)</title>
-    <url>/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/</url>
-    <content><![CDATA[<h1 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h1><h2 id="布尔比较运算符"><a href="#布尔比较运算符" class="headerlink" title="布尔比较运算符"></a>布尔比较运算符</h2><table>
-<thead>
-<tr>
-<th align="center">运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&#x3D;&#x3D;</td>
-<td>var1 &#x3D; var2 &#x3D;&#x3D; var3</td>
-<td>如果var2等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">!&#x3D;</td>
-<td>var1 &#x3D; var2 !&#x3D; var3</td>
-<td>如果var2不等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td>var1 &#x3D;  var2 &lt; var3</td>
-<td>如果var2小于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td>var1 &#x3D;  var2 &gt; var3</td>
-<td>如果var2大于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&lt;&#x3D;</td>
-<td>var1 &#x3D;  var2 &lt;&#x3D; var3</td>
-<td>如果var2小于等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&gt;&#x3D;</td>
-<td>var1 &#x3D;  var2 &gt;&#x3D; var3</td>
-<td>如果var2大于等于var3，var1为true，否则为flase</td>
-</tr>
-</tbody></table>
-<h2 id="布尔逻辑运算"><a href="#布尔逻辑运算" class="headerlink" title="布尔逻辑运算"></a>布尔逻辑运算</h2><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>!</td>
-<td>var1 &#x3D; ! var2</td>
-<td>如果var2是flase，var1为true，否则为flase(非逻辑)</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>var1 &#x3D; var2 &amp; var 3</td>
-<td>如果var2和var3都是true，var1为true，否则为flase(与逻辑)</td>
-</tr>
-<tr>
-<td>|</td>
-<td>var1 &#x3D; var2</td>
-<td>var 3</td>
-</tr>
-<tr>
-<td>^</td>
-<td>var1 &#x3D; var2 ^ var 3</td>
-<td>如果var2或var3中有且只有一个是true，var1为true，否则为flase(异或逻辑)</td>
-</tr>
-</tbody></table>
-<h3 id="与逻辑和或逻辑的优化运算符"><a href="#与逻辑和或逻辑的优化运算符" class="headerlink" title="与逻辑和或逻辑的优化运算符"></a>与逻辑和或逻辑的优化运算符</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp;&amp;</td>
-<td>var1 &#x3D; var2 &amp;&amp; var3</td>
-<td>与&amp;运算符相同</td>
-</tr>
-<tr>
-<td>||</td>
-<td>var1 &#x3D; var2</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>&amp;&amp; 和 || 是 &amp; 和|的*<strong>优化运算符</strong></p>
-<h2 id="布尔赋值运算符"><a href="#布尔赋值运算符" class="headerlink" title="布尔赋值运算符"></a>布尔赋值运算符</h2><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp;&#x3D;</td>
-<td>var1 &amp;&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 &amp; var2</td>
-</tr>
-<tr>
-<td>|&#x3D;</td>
-<td>var1 |&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 | var2</td>
-</tr>
-<tr>
-<td>^</td>
-<td>var1 ^&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 ^ var2</td>
-</tr>
-</tbody></table>
-<h1 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;test&gt; ? &lt;resultIfTrue&gt; :  &lt;resultIfFlase&gt;</span><br></pre></td></tr></table></figure>
-
-<p>计算<code>&lt;test&gt;</code>为一个bool值，若<code>&lt;test&gt;</code>为true，则结果为<code>&lt;resultIfTrue&gt;</code>，否则则反之</p>
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C#学习日记(16)</title>
-    <url>/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/</url>
-    <content><![CDATA[<h1 id="窗体计算机"><a href="#窗体计算机" class="headerlink" title="窗体计算机"></a>窗体计算机</h1><ul>
-<li><input checked="" disabled="" type="checkbox"> 四则运算</li>
-<li><input disabled="" type="checkbox"> 输入非数字或其他值报错</li>
-<li><input disabled="" type="checkbox"> 优化界面</li>
-</ul>
-<h2 id="界面概览"><a href="#界面概览" class="headerlink" title="界面概览"></a>界面概览</h2><p><img src="C:\Blog\source_posts\Csharp学习日记\捕获.PNG"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">tools</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">textBox1_TextChanged</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox1.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox1.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox2.Text);</span><br><span class="line"></span><br><span class="line">                textBox3.Text = Convert.ToString(x + y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button2_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox4.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox4.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox5.Text);</span><br><span class="line"></span><br><span class="line">                textBox6.Text = Convert.ToString(x - y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button3_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox7.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox7.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox8.Text);</span><br><span class="line"></span><br><span class="line">                textBox9.Text = Convert.ToString(x * y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button4_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox10.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                </span><br><span class="line">                    <span class="built_in">double</span> x = Convert.ToDouble(textBox10.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox11.Text);</span><br><span class="line"></span><br><span class="line">                    textBox12.Text = Convert.ToString(x / y);</span><br><span class="line">                </span><br><span class="line">   </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button5_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Control c <span class="keyword">in</span> Controls)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 判断是否是TextBox控件</span></span><br><span class="line">                <span class="keyword">if</span> (c <span class="keyword">is</span> TextBox)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 将TextBox控件的Text属性设为空字符串来清空内容</span></span><br><span class="line">                    ((TextBox)c).Text = <span class="built_in">string</span>.Empty;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>c#学习日记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C#学习日记(15)</title>
-    <url>/2024/08/31/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-15/</url>
-    <content><![CDATA[<h1 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h1><h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>不需要任何转换工作，也不需要另外编写代码.</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> var1 = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">double</span> var2;</span><br><span class="line">var2 = var1;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><p>要明确要求编译器把数值从一种数据类型转化为另一种.</p>
-<h3 id="Convert命令"><a href="#Convert命令" class="headerlink" title="Convert命令"></a>Convert命令</h3><p>可转换大多数变量</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Convert.To&lt;vartype&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>定义一个类型</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enum</span> &lt;typeName&gt;<span class="comment">//定义枚举</span></span><br><span class="line">&#123;</span><br><span class="line">   &lt;val1&gt;</span><br><span class="line">   &lt;val2&gt;</span><br><span class="line">   &lt;val3&gt;</span><br><span class="line">      ...</span><br><span class="line">    &lt;valN&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;typeName&gt; &lt;varName&gt; = &lt;typeName&gt;.&lt;valX&gt;;<span class="comment">//声明新类型的变量,并赋值</span></span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
       <categories>
         <category>c#学习日记</category>
