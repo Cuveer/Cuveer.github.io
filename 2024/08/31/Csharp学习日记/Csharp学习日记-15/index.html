@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>c#学习日记 |  Cuveer &#39;s blog</title>
+      <title>C#学习日记(15) |  Cuveer &#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -63,181 +63,180 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
+  <article
+  id="post-Csharp学习日记/Csharp学习日记-15"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  C#学习日记(15)
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/08/31/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-15/" class="article-date">
+  <time datetime="2024-08-31T07:17:23.000Z" itemprop="datePublished">2024-08-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">134</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+
+
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h1><h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>不需要任何转换工作，也不需要另外编写代码.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> var1 = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">double</span> var2;</span><br><span class="line">var2 = var1;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><p>要明确要求编译器把数值从一种数据类型转化为另一种.</p>
+<h3 id="Convert命令"><a href="#Convert命令" class="headerlink" title="Convert命令"></a>Convert命令</h3><p>可转换大多数变量</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Convert.To&lt;vartype&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>定义一个类型</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> &lt;typeName&gt;<span class="comment">//定义枚举</span></span><br><span class="line">&#123;</span><br><span class="line">   &lt;val1&gt;</span><br><span class="line">   &lt;val2&gt;</span><br><span class="line">   &lt;val3&gt;</span><br><span class="line">      ...</span><br><span class="line">    &lt;valN&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;typeName&gt; &lt;varName&gt; = &lt;typeName&gt;.&lt;valX&gt;;<span class="comment">//声明新类型的变量,并赋值</span></span><br></pre></td></tr></table></figure>
+
+
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
         <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
         </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">c#学习日记</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
+      </ul>
     </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/" class="archive-article-date">
-  <time datetime="2024-08-17T13:32:29.000Z" itemprop="datePublished">08/17</time>
-</a>
+    
+    <footer class="article-footer">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/17/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-5/"
-    >C#学习日记(5)</a> 
-</h2>
- 
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
 
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/" class="archive-article-date">
-  <time datetime="2024-08-16T07:16:24.000Z" itemprop="datePublished">08/16</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/16/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-4/"
-    >C#学习日记(4)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/" class="archive-article-date">
-  <time datetime="2024-08-15T07:58:28.000Z" itemprop="datePublished">08/15</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-3/"
-    >C#学习日记(3)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/" class="archive-article-date">
-  <time datetime="2024-08-14T07:01:36.000Z" itemprop="datePublished">08/14</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/14/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-2/"
-    >C#学习日记(2)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/" class="archive-article-date">
-  <time datetime="2024-08-13T12:18:51.000Z" itemprop="datePublished">08/13</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/08/13/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-1/"
-    >C#学习日记(1)</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-      
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/31/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-15/" alt="微信分享二维码">
     </div>
-  </div>
-  
-  
+</div>
 
-  
-  <nav class="page-nav">
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
     
-    <a class="extend prev" rel="prev" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">上一页</a><a class="page-number" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">1</a><span class="page-number current">2</span>
+      <a href="/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            C#学习日记(16)
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">C#学习日记(13)</div>
+      </a>
+    
   </nav>
+
   
+   
+  
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -358,6 +357,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link

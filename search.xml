@@ -679,4 +679,30 @@ private - 不允许外部访问
         <category>c#学习日记</category>
       </categories>
   </entry>
+  <entry>
+    <title>C#学习日记(15)</title>
+    <url>/2024/08/31/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-15/</url>
+    <content><![CDATA[<h1 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h1><h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><p>不需要任何转换工作，也不需要另外编写代码.</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> var1 = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">double</span> var2;</span><br><span class="line">var2 = var1;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><p>要明确要求编译器把数值从一种数据类型转化为另一种.</p>
+<h3 id="Convert命令"><a href="#Convert命令" class="headerlink" title="Convert命令"></a>Convert命令</h3><p>可转换大多数变量</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Convert.To&lt;vartype&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><p>定义一个类型</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enum</span> &lt;typeName&gt;<span class="comment">//定义枚举</span></span><br><span class="line">&#123;</span><br><span class="line">   &lt;val1&gt;</span><br><span class="line">   &lt;val2&gt;</span><br><span class="line">   &lt;val3&gt;</span><br><span class="line">      ...</span><br><span class="line">    &lt;valN&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;typeName&gt; &lt;varName&gt; = &lt;typeName&gt;.&lt;valX&gt;;<span class="comment">//声明新类型的变量,并赋值</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>c#学习日记</category>
+      </categories>
+  </entry>
 </search>
