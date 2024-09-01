@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>C#学习日记(13) |  Cuveer &#39;s blog</title>
+      <title>C#学习日记(16) |  Cuveer &#39;s blog</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -64,7 +64,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Csharp学习日记/Csharp学习日记-13"
+  id="post-Csharp学习日记/Csharp学习日记-16"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -75,7 +75,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  C#学习日记(13)
+  C#学习日记(16)
 </h1>
  
 
@@ -83,8 +83,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/" class="article-date">
-  <time datetime="2024-08-29T06:27:06.000Z" itemprop="datePublished">2024-08-29</time>
+      <a href="/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/" class="article-date">
+  <time datetime="2024-09-01T07:15:35.000Z" itemprop="datePublished">2024-09-01</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/c-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">c#学习日记</a>
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">365</span>
+            <span class="post-count">273</span>
         </span>
     </span>
 
@@ -121,121 +121,18 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h1><h2 id="布尔比较运算符"><a href="#布尔比较运算符" class="headerlink" title="布尔比较运算符"></a>布尔比较运算符</h2><table>
-<thead>
-<tr>
-<th align="center">运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&#x3D;&#x3D;</td>
-<td>var1 &#x3D; var2 &#x3D;&#x3D; var3</td>
-<td>如果var2等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">!&#x3D;</td>
-<td>var1 &#x3D; var2 !&#x3D; var3</td>
-<td>如果var2不等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td>var1 &#x3D;  var2 &lt; var3</td>
-<td>如果var2小于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td>var1 &#x3D;  var2 &gt; var3</td>
-<td>如果var2大于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&lt;&#x3D;</td>
-<td>var1 &#x3D;  var2 &lt;&#x3D; var3</td>
-<td>如果var2小于等于var3，var1为true，否则为flase</td>
-</tr>
-<tr>
-<td align="center">&gt;&#x3D;</td>
-<td>var1 &#x3D;  var2 &gt;&#x3D; var3</td>
-<td>如果var2大于等于var3，var1为true，否则为flase</td>
-</tr>
-</tbody></table>
-<h2 id="布尔逻辑运算"><a href="#布尔逻辑运算" class="headerlink" title="布尔逻辑运算"></a>布尔逻辑运算</h2><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>!</td>
-<td>var1 &#x3D; ! var2</td>
-<td>如果var2是flase，var1为true，否则为flase(非逻辑)</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>var1 &#x3D; var2 &amp; var 3</td>
-<td>如果var2和var3都是true，var1为true，否则为flase(与逻辑)</td>
-</tr>
-<tr>
-<td>|</td>
-<td>var1 &#x3D; var2</td>
-<td>var 3</td>
-</tr>
-<tr>
-<td>^</td>
-<td>var1 &#x3D; var2 ^ var 3</td>
-<td>如果var2或var3中有且只有一个是true，var1为true，否则为flase(异或逻辑)</td>
-</tr>
-</tbody></table>
-<h3 id="与逻辑和或逻辑的优化运算符"><a href="#与逻辑和或逻辑的优化运算符" class="headerlink" title="与逻辑和或逻辑的优化运算符"></a>与逻辑和或逻辑的优化运算符</h3><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp;&amp;</td>
-<td>var1 &#x3D; var2 &amp;&amp; var3</td>
-<td>与&amp;运算符相同</td>
-</tr>
-<tr>
-<td>||</td>
-<td>var1 &#x3D; var2</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>&amp;&amp; 和 || 是 &amp; 和|的*<strong>优化运算符</strong></p>
-<h2 id="布尔赋值运算符"><a href="#布尔赋值运算符" class="headerlink" title="布尔赋值运算符"></a>布尔赋值运算符</h2><table>
-<thead>
-<tr>
-<th>运算符</th>
-<th>示例表达式</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp;&#x3D;</td>
-<td>var1 &amp;&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 &amp; var2</td>
-</tr>
-<tr>
-<td>|&#x3D;</td>
-<td>var1 |&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 | var2</td>
-</tr>
-<tr>
-<td>^</td>
-<td>var1 ^&#x3D; var2</td>
-<td>等于var1  &#x3D;var1 ^ var2</td>
-</tr>
-</tbody></table>
-<h1 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;test&gt; ? &lt;resultIfTrue&gt; :  &lt;resultIfFlase&gt;</span><br></pre></td></tr></table></figure>
+  <h1 id="窗体计算机"><a href="#窗体计算机" class="headerlink" title="窗体计算机"></a>窗体计算机</h1><ul>
+<li><input checked="" disabled="" type="checkbox"> 四则运算</li>
+<li><input disabled="" type="checkbox"> 输入非数字或其他值报错</li>
+<li><input disabled="" type="checkbox"> 优化界面</li>
+</ul>
+<h2 id="界面概览"><a href="#界面概览" class="headerlink" title="界面概览"></a>界面概览</h2><p><img src="C:\Blog\source_posts\Csharp学习日记\捕获.PNG"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">tools</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">textBox1_TextChanged</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button1_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox1.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox1.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox2.Text);</span><br><span class="line"></span><br><span class="line">                textBox3.Text = Convert.ToString(x + y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button2_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox4.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox4.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox5.Text);</span><br><span class="line"></span><br><span class="line">                textBox6.Text = Convert.ToString(x - y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button3_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox7.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> x = Convert.ToDouble(textBox7.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox8.Text);</span><br><span class="line"></span><br><span class="line">                textBox9.Text = Convert.ToString(x * y);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button4_Click_1</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (textBox10.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                </span><br><span class="line">                    <span class="built_in">double</span> x = Convert.ToDouble(textBox10.Text);</span><br><span class="line">                <span class="built_in">double</span> y = Convert.ToDouble(textBox11.Text);</span><br><span class="line"></span><br><span class="line">                    textBox12.Text = Convert.ToString(x / y);</span><br><span class="line">                </span><br><span class="line">   </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">button5_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Control c <span class="keyword">in</span> Controls)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 判断是否是TextBox控件</span></span><br><span class="line">                <span class="keyword">if</span> (c <span class="keyword">is</span> TextBox)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 将TextBox控件的Text属性设为空字符串来清空内容</span></span><br><span class="line">                    ((TextBox)c).Text = <span class="built_in">string</span>.Empty;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>计算<code>&lt;test&gt;</code>为一个bool值，若<code>&lt;test&gt;</code>为true，则结果为<code>&lt;resultIfTrue&gt;</code>，否则则反之</p>
+
+
+
+
  
       <!-- reward -->
       
@@ -300,7 +197,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,19 +208,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/09/01/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-16/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            C#学习日记(16)
-          
-        </div>
-      </a>
     
-    
-      <a href="/2024/08/24/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-12/" class="article-nav-link">
+      <a href="/2024/08/29/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-13/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">c#学习日记(12)</div>
+        <div class="article-nav-title">C#学习日记(13)</div>
       </a>
     
   </nav>
