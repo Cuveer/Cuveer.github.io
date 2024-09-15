@@ -704,4 +704,21 @@ private - 不允许外部访问
         <category>c#学习日记</category>
       </categories>
   </entry>
+  <entry>
+    <title>C#学习日记(17)</title>
+    <url>/2024/09/15/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/Csharp%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-17/</url>
+    <content><![CDATA[<h1 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h1><p>是由几个数据组成的数据结构，这些数据可以有不同的类型</p>
+<h2 id="定义结构"><a href="#定义结构" class="headerlink" title="定义结构"></a>定义结构</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> &lt;typeName&gt;</span><br><span class="line">&#123;</span><br><span class="line">    &lt;memberDeclarations&gt;;<span class="comment">//结构的数据成员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="部分的格式"><a href="#部分的格式" class="headerlink" title="&lt;memberDeclarations&gt;部分的格式"></a><code>&lt;memberDeclarations&gt;</code>部分的格式</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;accessibility&gt; &lt;type&gt; &lt;name&gt;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>&lt;accessilbility&gt;</code>部分可以使用<code>public</code>关键字</p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="声明数组"><a href="#声明数组" class="headerlink" title="声明数组"></a>声明数组</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;basetype&gt; [] &lt;name&gt;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="赋值数组"><a href="#赋值数组" class="headerlink" title="赋值数组"></a>赋值数组</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">&lt;name&gt; [&lt;num&gt;] = &lt;val&gt;;</span><br><span class="line"><span class="comment">//或</span></span><br><span class="line">&lt;name&gt; = &#123;&lt;va1One&gt;,&lt;valTwo&gt;,&lt;valThree&gt;&#125;;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+  </entry>
 </search>
